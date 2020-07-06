@@ -10,6 +10,7 @@ namespace Sundo_parcial_aplicada.DAL
     {
         public DbSet<Proyecto> Jugadores { get; set; }
         public DbSet<Tareas> Partidas { get; set; }
+        public object Proyecto { get; internal set; }
 
         //——————————————————————————————————————————————————————————————————————————————————————
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
