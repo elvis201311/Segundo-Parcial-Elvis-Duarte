@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sundo_parcial_aplicada.UI.Registros;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,21 @@ namespace Sundo_parcial_aplicada
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+      
+
+      
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            rRegistro rPartidas = new rRegistro();
+            rPartidas.Show();
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            rConsulta rConsulta = new rConsulta();
+            rConsulta.Show();
         }
     }
 }
