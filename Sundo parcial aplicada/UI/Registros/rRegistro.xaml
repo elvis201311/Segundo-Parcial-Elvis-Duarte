@@ -33,7 +33,7 @@
                         <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                             <StackPanel Orientation="Vertical">
                                 <Label Content="Tipo de tarea"/>
-                                <ComboBox x:Name="TipoTareaComboBox" Width="100" Margin="0,0,10,0" />
+                                <ComboBox x:Name="TipoTareaComboBox" SelectedValue="{Binding TareaId}" Width="100" Margin="0,0,10,0" />
                             </StackPanel>
 
                             <StackPanel Orientation="Vertical">
@@ -57,7 +57,7 @@
                             </StackPanel>
                         </StackPanel>
                         <!--——————————————————————————————————————————————[ DATA GRID ]——————————————————————————————————————————————-->
-                        <DataGrid x:Name="DetalleDataGrid" ItemsSource="{Binding Detalle}" Height="80" AutoGenerateColumns="False" Margin="0,10,0,0">
+                        <DataGrid x:Name="DetalleDataGrid" ItemsSource="{Binding Detalles}" Height="80" AutoGenerateColumns="False" Margin="0,10,0,0">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="TipoId" Binding="{Binding TipoId}"/>
                                 <DataGridTextColumn Header="Tipo Tarea" Binding="{Binding tipo.TipoTarea}"/>

@@ -19,10 +19,7 @@ namespace Sundo_parcial_aplicada.UI.Registros
     /// </summary>
     public partial class rRegistro : Window
     {
-        public rRegistro()
-        {
-            InitializeComponent();
-        }
+       
             
         public Proyectos proyectos = new Proyectos();
         public rRegistro()
@@ -31,7 +28,7 @@ namespace Sundo_parcial_aplicada.UI.Registros
             this.DataContext = proyectos;
 
             //—————————————————————————————————————[ VALORES DEL ComboBox ]—————————————————————————————————————
-            TipoTareaComboBox.SelectedValuePath = "TareasId";
+            TipoTareaComboBox.SelectedValuePath = "TareaId";
             TipoTareaComboBox.DisplayMemberPath = "TipoTarea";
             TipoTareaComboBox.ItemsSource = TareasBLL.GetList();
         }
@@ -84,9 +81,10 @@ namespace Sundo_parcial_aplicada.UI.Registros
         {
             var filaDetalle = new ProyectoDetalle
             {
+                ProyectoId = Convert.ToInt32(ProyectoIdTextbox.Text.ToString()),
                 TareaId = Convert.ToInt32(TipoTareaComboBox.SelectedValue.ToString()),
                 Requerimiento = (RequerimientoTextBox.Text.ToString()),
-                Tiempo = Convert.ToDouble(TiempoTextBox.Text.ToString()),
+                Tiempo = Convert.ToDouble(TiempoTextBox.Text.ToString())
             };
 
             this.proyectos.Detalles.Add(filaDetalle);

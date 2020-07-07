@@ -153,7 +153,7 @@ namespace Sundo_parcial_aplicada.BLL
             {
                 proyectos = contexto.Proyectos
                     .Where(p => p.ProyectoId == id)
-                    .Include(p => p.Detalles).ThenInclude(t => t.Requerimiento)
+                    .Include(p => p.Detalles).ThenInclude(t => t.Tarea)
                     .SingleOrDefault();
             }
             catch (Exception)
