@@ -14,6 +14,6 @@ namespace Sundo_parcial_aplicada.Entidades
         public string Descripcion { get; set; }
 
         [ForeignKey("ProyectoId")]
-        public virtual List<ProyectoDetalle> Detalle { get; set; } = new List<ProyectoDetalle>();
+        public virtual List<ProyectoDetalle> Detalles { get; set; } = new List<ProyectoDetalle>();
     }
 }
