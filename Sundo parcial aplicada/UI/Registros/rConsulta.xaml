@@ -27,7 +27,7 @@
 
                 </StackPanel>
 
-                <Button x:Name="BuscarButton" Height="30" Width="90" Click="ConsultarButton_Click" >
+                <Button x:Name="BuscarButton" Height="30" Width="90"  >
                     <StackPanel Orientation="Horizontal" >
                         <Image Source="/Resources/Buscar.png" Width="25"  />
                         <Label Content="Consultar" />

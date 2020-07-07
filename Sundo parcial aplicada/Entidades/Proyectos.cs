@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Sundo_parcial_aplicada.Entidades
 {
-    public class Proyecto
+    public class Proyectos
     {
         [Key]
         public int ProyectoId { get; set; }

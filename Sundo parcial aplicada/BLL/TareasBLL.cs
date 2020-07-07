@@ -2,6 +2,7 @@
 using Sundo_parcial_aplicada.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Sundo_parcial_aplicada.BLL

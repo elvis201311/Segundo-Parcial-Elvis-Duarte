@@ -11,11 +11,11 @@
             <!--——————————————————————————————————————————————[ MENU ITEMS ]——————————————————————————————————————————————-->
             <Menu Height="24" FontSize="15">
                 <MenuItem Header="Registros" Click="MenuItem_Click_1">
-                    <MenuItem x:Name="rArticulosMenuItem" Click="rPartidaMenuItem_Click" Header="Registrar Partida"/>
+                    <MenuItem x:Name="rArticulosMenuItem"  Header="Registrar Partida"/>
                 </MenuItem>
 
                 <MenuItem Header="Consultas" Click="MenuItem_Click">
-                    <MenuItem x:Name="cJugadasMenuItem" Click="cJugadasMenuItem_Click" Header="Consultar Partida"/>
+                    <MenuItem x:Name="cJugadasMenuItem"  Header="Consultar Partida"/>
                 </MenuItem>
             </Menu>
         </StackPanel>

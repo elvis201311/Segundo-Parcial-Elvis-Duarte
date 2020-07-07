@@ -3,6 +3,7 @@ using Sundo_parcial_aplicada.DAL;
 using Sundo_parcial_aplicada.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 
@@ -12,7 +13,7 @@ namespace Sundo_parcial_aplicada.BLL
        public class ProyectosBLL
     {
         
-        public static bool Guardar(Proyecto proyectos)
+        public static bool Guardar(Proyectos proyectos)
         {
             bool paso;
 
@@ -24,14 +25,14 @@ namespace Sundo_parcial_aplicada.BLL
             return paso;
         }
        
-        public static bool Insertar(Proyecto proyectos)
+        public static bool Insertar(Proyectos proyectos)
         {
             Contexto contexto = new Contexto();
             bool paso = false;
 
             try
             {
-                contexto.Proyecto.Add(proyectos);
+                contexto.Proyectos.Add(proyectos);
                 paso = contexto.SaveChanges() > 0;
             }
             catch (Exception)
@@ -46,7 +47,7 @@ namespace Sundo_parcial_aplicada.BLL
             return paso;
         }
        
-        public static bool Modificar(Proyecto proyectos)
+        public static bool Modificar(Proyectos proyectos)
         {
             Contexto contexto = new Contexto();
             bool paso = false;
@@ -82,10 +83,10 @@ namespace Sundo_parcial_aplicada.BLL
             Contexto contexto = new Contexto();
             try
             {
-                var proyectos = contexto.Proyecto.Find(id);
+                var proyectos = contexto.Proyectos.Find(id);
                 if (proyectos != null)
                 {
-                    contexto.Proyecto.Remove(proyectos);
+                    contexto.Proyectos.Remove(proyectos);
                     paso = contexto.SaveChanges() > 0;
                 }
             }
@@ -101,14 +102,14 @@ namespace Sundo_parcial_aplicada.BLL
             return paso;
         }
         
-        public static List<Proyecto> GetList(Expression<Func<Proyecto, bool>> criterio)
+        public static List<Proyectos> GetList(Expression<Func<Proyectos, bool>> criterio)
         {
-            List<Proyecto> lista = new List<Proyecto>();
+            List<Proyectos> lista = new List<Proyectos>();
             Contexto contexto = new Contexto();
 
             try
             {
-                lista = contexto.Proyecto.Where(criterio).ToList();
+                lista = contexto.Proyectos.Where(criterio).ToList();
             }
             catch (Exception)
             {
@@ -129,7 +130,7 @@ namespace Sundo_parcial_aplicada.BLL
 
             try
             {
-                encontrado = contexto.Proyecto.Any(p => p.ProyectoId == id);
+                encontrado = contexto.Proyectos.Any(p => p.ProyectoId == id);
             }
             catch (Exception)
             {
@@ -143,16 +144,16 @@ namespace Sundo_parcial_aplicada.BLL
             return encontrado;
         }
        
-        public static Proyecto Buscar(int id)
+        public static Proyectos Buscar(int id)
         {
-            Proyecto proyectos = new Proyecto();
+            Proyectos proyectos = new Proyectos();
             Contexto contexto = new Contexto();
 
             try
             {
-                proyectos = contexto.Proyecto
+                proyectos = contexto.Proyectos
                     .Where(p => p.ProyectoId == id)
-                    .Include(p => p.Detalle).ThenInclude(t => t.tipo)
+                    .Include(p => p.Detalles).ThenInclude(t => t.Requerimiento)
                     .SingleOrDefault();
             }
             catch (Exception)
