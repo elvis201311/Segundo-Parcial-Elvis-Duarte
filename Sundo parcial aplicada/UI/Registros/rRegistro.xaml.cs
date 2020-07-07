@@ -59,7 +59,7 @@ namespace Sundo_parcial_aplicada.UI.Registros
         //——————————————————————————————————————————————————————————————[ Buscar ]———————————————————————————————————————————————————————————————
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            Proyectos encontrado = ProyectosBLL.Buscar(proyectos.ProyectoId);
+            Proyectos encontrado = ProyectosBLL.Buscar(Convert.ToInt32(ProyectoIdTextbox.Text));
 
             if (encontrado != null)
             {
