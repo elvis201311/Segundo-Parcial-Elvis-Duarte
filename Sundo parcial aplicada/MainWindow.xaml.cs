@@ -31,7 +31,7 @@ namespace Sundo_parcial_aplicada
       
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
-            rRegistro rRegistro = new rRegistro();
+            rRegistros rRegistro = new rRegistros();
             rRegistro.Show();
         }
 

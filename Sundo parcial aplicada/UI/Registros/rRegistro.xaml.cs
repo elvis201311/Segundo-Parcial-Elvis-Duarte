@@ -17,12 +17,12 @@ namespace Sundo_parcial_aplicada.UI.Registros
     /// <summary>
     /// Interaction logic for rRegistro.xaml
     /// </summary>
-    public partial class rRegistro : Window
+    public partial class rRegistros : Window
     {
        
             
         public Proyectos proyectos = new Proyectos();
-        public rRegistro()
+        public rRegistros()
         {
             InitializeComponent();
             this.DataContext = proyectos;

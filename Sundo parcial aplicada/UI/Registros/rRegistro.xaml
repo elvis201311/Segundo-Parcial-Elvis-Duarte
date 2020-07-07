@@ -1,4 +1,4 @@
-﻿<Window x:Class="Sundo_parcial_aplicada.UI.Registros.rRegistro"
+﻿<Window x:Class="Sundo_parcial_aplicada.UI.Registros.rRegistros"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
