@@ -43,10 +43,10 @@ namespace Sundo_parcial_aplicada.UI.Registros
                 {
                     listado = ProyectosBLL.GetList(c => true);
                 }
-                if (DesdeDatePicker.SelectedDate != null)
+               /* if (DesdeDatePicker.SelectedDate != null)
                     listado = (List<Proyectos>)ProyectosBLL.GetList(p => p.Fecha.Date >= DesdeDatePicker.SelectedDate);
                 if (HastaDatePicker.SelectedDate != null)
-                    listado = (List<Proyectos>)ProyectosBLL.GetList(p => p.Fecha.Date <= HastaDatePicker.SelectedDate);
+                    listado = (List<Proyectos>)ProyectosBLL.GetList(p => p.Fecha.Date <= HastaDatePicker.SelectedDate);*/
 
                 DatosDataGrid.ItemsSource = null;
                 DatosDataGrid.ItemsSource = listado;
